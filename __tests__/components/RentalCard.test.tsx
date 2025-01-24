@@ -52,6 +52,9 @@ describe("RentalCard component", () => {
     // Vérifie que l'image n'est pas rendue ou que la source est vide
     const imgElement = screen.getByAltText(rental.title);
     expect(imgElement).toHaveAttribute("alt", rental.title);
-    expect(imgElement).not.toHaveAttribute("src");
+    expect(imgElement).toHaveAttribute(
+      "src",
+      "https://via.placeholder.com/300"
+    );
   });
 });

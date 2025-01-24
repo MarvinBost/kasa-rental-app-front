@@ -10,7 +10,7 @@ export default function RentalCard({rental}: RentalCardProps) {
     <Link to={`/rental/${rental.id}`} className="relative group">
       <div className="relative h-[340px] rounded-xl overflow-hidden">
         <img
-          src={rental.cover}
+          src={rental.cover || "https://via.placeholder.com/300"}
           alt={rental.title}
           className="w-full h-full object-cover"
         />
