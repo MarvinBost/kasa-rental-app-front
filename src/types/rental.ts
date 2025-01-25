@@ -1,9 +1,9 @@
-export interface Host {
+export type Host = {
   name: string;
   picture: string;
-}
+};
 
-export interface Rental {
+export type Rental = {
   id: string;
   title: string;
   cover: string;
@@ -14,4 +14,6 @@ export interface Rental {
   location: string;
   equipments: string[];
   tags: string[];
-}
+};
+
+export type RentalCard = Pick<Rental, "id" | "title" | "cover">;

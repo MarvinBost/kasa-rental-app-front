@@ -4,10 +4,10 @@ import {
   FiChevronLeft as LeftArrow,
 } from "react-icons/fi";
 
-interface CarouselProps {
+export type CarouselProps = {
   pictures: string[];
   altText: string;
-}
+};
 
 export default function Carousel({pictures, altText}: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);

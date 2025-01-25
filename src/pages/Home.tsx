@@ -23,7 +23,7 @@ export default function Home() {
 
   if (rentals.length === 0) {
     return (
-      <div className="px-20">
+      <div className="px-4 sm:px-8 md:px-12 lg:px-20 max-w-[1240px] mx-auto">
         <Hero
           title="Chez vous, partout et ailleurs"
           image="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
@@ -38,13 +38,14 @@ export default function Home() {
     );
   } else {
     return (
-      <div className="px-20">
+      <div className="px-4 sm:px-8 md:px-12 lg:px-20 max-w-[1240px] mx-auto">
         <Hero
           title="Chez vous, partout et ailleurs"
           image="https://images.unsplash.com/photo-1501785888041-af3ef285b470"
+          className="max-w-[1240px] mx-auto"
         />
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-gray-100 p-8 rounded-3xl">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 bg-gray-100 p-8 rounded-3xl max-w-[1240px] mx-auto">
           {rentals.map((rental) => (
             <RentalCard key={rental.id} rental={rental} />
           ))}

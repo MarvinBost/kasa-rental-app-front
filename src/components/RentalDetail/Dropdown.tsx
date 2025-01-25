@@ -1,10 +1,10 @@
 import {ReactNode} from "react";
 import {ChevronDown} from "lucide-react";
 
-interface DropdownProps {
+export type DropdownProps = {
   title: string;
   children: ReactNode;
-}
+};
 
 export default function Dropdown({title, children}: DropdownProps) {
   return (

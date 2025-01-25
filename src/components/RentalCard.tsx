@@ -1,8 +1,8 @@
 import {Link} from "react-router-dom";
-import type {Rental} from "../types/rental";
+import type {RentalCard} from "../types/rental";
 
 interface RentalCardProps {
-  rental: Rental;
+  rental: RentalCard;
 }
 
 export default function RentalCard({rental}: RentalCardProps) {

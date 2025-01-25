@@ -23,7 +23,7 @@ export default function RentalDetail() {
   }
 
   return (
-    <div className="px-20">
+    <div className="px-20 max-w-[1240px] mx-auto">
       {/* Image Carousel */}
       <Carousel pictures={rental.pictures} altText={rental.title} />
 
