@@ -9,8 +9,9 @@ export class RentalsService {
 
   private async loadRentals(): Promise<void> {
     if (!this.dataLoaded) {
+      const rentalsUrl = `${process.env.BASE_URL}rentals.json`;
       try {
-        const response = await axios.get<Rental[]>('/rentals.json'); // Appelle le fichier dans `public/rentals.json`
+        const response = await axios.get<Rental[]>(rentalsUrl);
         const data = Array.isArray(response.data) ? response.data : [];
         this.rentals = data;
         this.dataLoaded = true;
