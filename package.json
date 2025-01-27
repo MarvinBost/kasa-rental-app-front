@@ -10,7 +10,8 @@
     "preview": "vite preview",
     "test": "jest",
     "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@tailwindcss/vite": "^4.0.0",
@@ -60,7 +61,8 @@
     "typescript": "^5.7.3",
     "typescript-eslint": "^8.3.0",
     "util": "^0.12.5",
-    "vite": "^6.0.11"
+    "vite": "^6.0.11",
+    "husky": "^8.0.0"
   },
   "presets": [
     "@babel/preset-env"
@@ -69,5 +71,9 @@
     "extends": [
       "plugin:storybook/recommended"
     ]
+  },
+  "lint-staged": {
+    "*.{ts,tsx}": "eslint --fix",
+    "*.{ts,tsx,css}": "prettier --write"
   }
 }
