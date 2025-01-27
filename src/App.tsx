@@ -10,7 +10,7 @@ const About = lazy(() => import('@pages/About'));
 const RentalDetail = lazy(() => import('@pages/RentalDetail'));
 const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/kasa-rental-app-front">
       <div className="min-h-screen flex flex-col">
         <Header />
         <main className="flex-grow py-8">

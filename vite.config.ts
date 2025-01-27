@@ -8,9 +8,6 @@ import path from 'path';
 export default defineConfig({
   plugins: [react(), tailwindcss(), EnvironmentPlugin('all')],
   base: '/kasa-rental-app-front/',
-  optimizeDeps: {
-    exclude: ['lucide-react'],
-  },
   resolve: {
     extensions: ['.js', '.jsx', '.ts', '.tsx', '.json', '.mdx'],
     alias: {
