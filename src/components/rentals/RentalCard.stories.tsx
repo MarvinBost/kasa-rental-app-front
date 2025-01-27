@@ -18,17 +18,8 @@ Default.args = {
   rental: {
     id: '1',
     title: 'Beautiful Beach House',
-    cover: 'https://placehold.co/300x300?text=Picture',
+    cover:
+      'https://placehold.co/600x400/FF6060/FFFFFF?text=Picture+of+the+beach+house',
   },
   loading: false,
-};
-
-export const Loading = Template.bind({});
-Loading.args = {
-  rental: {
-    id: '1',
-    title: 'Beautiful Beach House',
-    cover: '',
-  },
-  loading: true,
 };
