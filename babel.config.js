@@ -2,4 +2,5 @@ export const presets = [
   '@babel/preset-env',
   ['@babel/preset-react', { runtime: 'automatic' }],
   '@babel/preset-typescript',
+  ["babel-plugin-transform-import-meta"]
 ];
