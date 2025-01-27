@@ -21,7 +21,7 @@ describe('RentalCard component', () => {
   it('should render correctly', () => {
     render(
       <MemoryRouter>
-        <RentalCard rental={rental} />
+        <RentalCard rental={rental} loading={false} />
       </MemoryRouter>,
     );
 
@@ -44,7 +44,7 @@ describe('RentalCard component', () => {
 
     render(
       <MemoryRouter>
-        <RentalCard rental={incompleteRental} />
+        <RentalCard rental={incompleteRental} loading={false} />
       </MemoryRouter>,
     );
 
