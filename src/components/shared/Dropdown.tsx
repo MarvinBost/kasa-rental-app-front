@@ -1,12 +1,12 @@
-import {ReactNode} from "react";
-import {ChevronDown} from "lucide-react";
+import { ReactNode } from 'react';
+import { ChevronDown } from 'lucide-react';
 
-interface DropdownProps {
+export type DropdownProps = {
   title: string;
   children: ReactNode;
-}
+};
 
-export default function Dropdown({title, children}: DropdownProps) {
+export default function Dropdown({ title, children }: DropdownProps) {
   return (
     <details className="group">
       <summary className="flex items-center justify-between bg-[#FF6060] text-white p-4 rounded-lg cursor-pointer">

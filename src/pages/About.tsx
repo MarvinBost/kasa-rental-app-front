@@ -1,22 +1,22 @@
-import Hero from "../components/Hero";
-import Dropdown from "../components/RentalDetail/Dropdown";
+import Hero from '@components/shared/Hero';
+import Dropdown from '@components/shared/Dropdown';
 
 const ABOUT_SECTIONS = [
   {
-    title: "Fiabilité",
+    title: 'Fiabilité',
     content:
-      "Les annonces postées sur Kasa garantissent une fiabilité totale...",
+      'Les annonces postées sur Kasa garantissent une fiabilité totale...',
   },
   {
-    title: "Respect",
-    content: "La bienveillance fait partie des valeurs fondatrices de Kasa...",
+    title: 'Respect',
+    content: 'La bienveillance fait partie des valeurs fondatrices de Kasa...',
   },
   {
-    title: "Service",
+    title: 'Service',
     content:
-      "Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite...",
+      'Nos équipes se tiennent à votre disposition pour vous fournir une expérience parfaite...',
   },
-  {title: "Sécurité", content: "La sécurité est la priorité de Kasa..."},
+  { title: 'Sécurité', content: 'La sécurité est la priorité de Kasa...' },
 ];
 
 export default function About() {

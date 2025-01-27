@@ -1,12 +1,12 @@
-import {RatingStars} from "./RatingStars";
+import { RatingStars } from '@components/shared/RatingStars';
 
-interface HostInfoProps {
+export type HostInfoProps = {
   name: string;
   picture: string;
   rating: number;
-}
+};
 
-export default function HostInfo({name, picture, rating}: HostInfoProps) {
+export default function HostInfo({ name, picture, rating }: HostInfoProps) {
   return (
     <div className="flex flex-col items-end gap-6">
       {/* Host Name and Picture */}

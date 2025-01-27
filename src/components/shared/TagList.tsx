@@ -1,4 +1,4 @@
-export default function TagList({tags}: {tags: string[]}) {
+export default function TagList({ tags }: { tags: string[] }) {
   return (
     <div className="flex gap-2 mt-2">
       {tags.map((tag) => (

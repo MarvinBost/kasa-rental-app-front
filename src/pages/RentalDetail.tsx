@@ -1,14 +1,14 @@
-import {useParams} from "react-router-dom";
-import {useRental} from "../hooks/useRental";
-import NotFound from "./NotFound";
-import TagList from "../components/RentalDetail/TagList";
-import Carousel from "../components/RentalDetail/Carousel";
-import Dropdown from "../components/RentalDetail/Dropdown";
-import HostInfo from "../components/RentalDetail/HostInfo";
+import { useParams } from 'react-router-dom';
+import { useRental } from '@features/rentals/hooks/useRental';
+import NotFound from './NotFound';
+import TagList from '@components/shared/TagList';
+import Carousel from '@components/shared/Carousel';
+import Dropdown from '@components/shared/Dropdown';
+import HostInfo from '@components/RentalDetail/HostInfo';
 
 export default function RentalDetail() {
-  const {id} = useParams<{id: string}>();
-  const {rental, loading, error} = useRental(id || "");
+  const { id } = useParams<{ id: string }>();
+  const { rental, loading, error } = useRental(id || '');
 
   if (loading) {
     return (
@@ -23,7 +23,7 @@ export default function RentalDetail() {
   }
 
   return (
-    <div className="px-20">
+    <div className="px-20 max-w-[1240px] mx-auto">
       {/* Image Carousel */}
       <Carousel pictures={rental.pictures} altText={rental.title} />
 

@@ -1,5 +1,5 @@
-import axios from "axios";
-import type {Rental} from "../../types/rental";
+import axios from 'axios';
+import type { Rental } from '@features/rentals/types';
 
 export class RentalsService {
   private static instance: RentalsService;
@@ -10,16 +10,16 @@ export class RentalsService {
   private async loadRentals(): Promise<void> {
     if (!this.dataLoaded) {
       try {
-        const response = await axios.get<Rental[]>("/rentals.json"); // Appelle le fichier dans `public/rentals.json`
+        const response = await axios.get<Rental[]>('/rentals.json'); // Appelle le fichier dans `public/rentals.json`
         const data = Array.isArray(response.data) ? response.data : [];
         this.rentals = data;
         this.dataLoaded = true;
       } catch (error) {
         console.error(
-          "Erreur lors du chargement des données des locations :",
-          error
+          'Erreur lors du chargement des données des locations :',
+          error,
         );
-        throw new Error("Impossible de charger les données des locations.");
+        throw new Error('Impossible de charger les données des locations.');
       }
     }
   }
@@ -48,7 +48,7 @@ export class RentalsService {
       (rental) =>
         rental.title.toLowerCase().includes(lowercaseQuery) ||
         rental.location.toLowerCase().includes(lowercaseQuery) ||
-        rental.tags.some((tag) => tag.toLowerCase().includes(lowercaseQuery))
+        rental.tags.some((tag) => tag.toLowerCase().includes(lowercaseQuery)),
     );
   }
 }

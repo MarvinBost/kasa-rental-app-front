@@ -1,26 +1,26 @@
-import {useState} from "react";
+import { useState } from 'react';
 import {
-  ChevronRight as RightArrow,
-  ChevronLeft as LeftArrow,
-} from "lucide-react";
+  FiChevronRight as RightArrow,
+  FiChevronLeft as LeftArrow,
+} from 'react-icons/fi';
 
-interface CarouselProps {
+export type CarouselProps = {
   pictures: string[];
   altText: string;
-}
+};
 
-export default function Carousel({pictures, altText}: CarouselProps) {
+export default function Carousel({ pictures, altText }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? pictures.length - 1 : prevIndex - 1
+      prevIndex === 0 ? pictures.length - 1 : prevIndex - 1,
     );
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === pictures.length - 1 ? 0 : prevIndex + 1
+      prevIndex === pictures.length - 1 ? 0 : prevIndex + 1,
     );
   };
 
@@ -38,12 +38,14 @@ export default function Carousel({pictures, altText}: CarouselProps) {
         <>
           <button
             onClick={handlePrev}
+            aria-label="Previous image"
             className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-[#FF6060] text-white p-2 rounded-full hover:bg-[#FF4040] transition"
           >
             <LeftArrow className="w-6 h-6" />
           </button>
           <button
             onClick={handleNext}
+            aria-label="Next image"
             className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-[#FF6060] text-white p-2 rounded-full hover:bg-[#FF4040] transition"
           >
             <RightArrow className="w-6 h-6" />
