@@ -1,4 +1,4 @@
-import {TextEncoder, TextDecoder} from "util";
+import { TextEncoder, TextDecoder as NodeTextDecoder } from 'util';
 
-global.TextEncoder = TextEncoder as any;
-global.TextDecoder = TextDecoder as any;
+global.TextEncoder = TextEncoder;
+global.TextDecoder = NodeTextDecoder as typeof TextDecoder;

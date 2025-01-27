@@ -1,17 +1,26 @@
+import { FlatCompat } from '@eslint/eslintrc';
 import js from '@eslint/js';
 import globals from 'globals';
 import reactHooks from 'eslint-plugin-react-hooks';
 import reactRefresh from 'eslint-plugin-react-refresh';
-import tseslint from 'typescript-eslint';
+import prettier from 'eslint-config-prettier';
 
-export default tseslint.config(
-  { ignores: ['dist'] },
+const compat = new FlatCompat();
+
+export default [
+  js.configs.recommended,
+  ...compat.extends('plugin:@typescript-eslint/recommended'),
+  ...compat.extends('plugin:storybook/recommended'),
+  prettier,
   {
-    extends: [js.configs.recommended, ...tseslint.configs.recommended],
+    ignores: ['dist', 'jest.setup.ts'],
     files: ['**/*.{ts,tsx}'],
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: {
+        ...globals.browser,
+        jest: true,
+      },
     },
     plugins: {
       'react-hooks': reactHooks,
@@ -24,13 +33,5 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
     },
-    overrides: [
-    {
-      "files": ["__tests__/**/*"],
-      "env": {
-        "jest": true
-      }
-    }
-  ]
-  }
-);
+  },
+];

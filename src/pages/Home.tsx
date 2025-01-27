@@ -1,9 +1,9 @@
-import Hero from "../components/Hero";
-import RentalCard from "../components/RentalCard";
-import {useRentals} from "../hooks/useRentals";
+import Hero from '@components/shared/Hero';
+import RentalCard from '@components/rentals/RentalCard';
+import { useRentals } from '@features/rentals/hooks/useRentals';
 
 export default function Home() {
-  const {rentals, loading, error} = useRentals();
+  const { rentals, loading, error } = useRentals();
 
   if (loading) {
     return (

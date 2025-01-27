@@ -1,7 +1,7 @@
 export default function Hero({
   image,
   title,
-  className = "",
+  className = '',
 }: {
   image: string;
   title?: string;

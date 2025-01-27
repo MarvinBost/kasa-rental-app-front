@@ -1,26 +1,26 @@
-import {useState} from "react";
+import { useState } from 'react';
 import {
   FiChevronRight as RightArrow,
   FiChevronLeft as LeftArrow,
-} from "react-icons/fi";
+} from 'react-icons/fi';
 
 export type CarouselProps = {
   pictures: string[];
   altText: string;
 };
 
-export default function Carousel({pictures, altText}: CarouselProps) {
+export default function Carousel({ pictures, altText }: CarouselProps) {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const handlePrev = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === 0 ? pictures.length - 1 : prevIndex - 1
+      prevIndex === 0 ? pictures.length - 1 : prevIndex - 1,
     );
   };
 
   const handleNext = () => {
     setCurrentIndex((prevIndex) =>
-      prevIndex === pictures.length - 1 ? 0 : prevIndex + 1
+      prevIndex === pictures.length - 1 ? 0 : prevIndex + 1,
     );
   };
 

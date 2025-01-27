@@ -1,6 +1,6 @@
-import {useState} from "react";
-import {Home, Menu, X} from "lucide-react";
-import {Link, useLocation} from "react-router-dom";
+import { useState } from 'react';
+import { Home, Menu, X } from 'lucide-react';
+import { Link, useLocation } from 'react-router-dom';
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -34,7 +34,7 @@ export default function Header() {
             <Link
               to="/"
               className={`text-[#FF6060] hover:underline transition ${
-                location.pathname === "/" ? "underline" : ""
+                location.pathname === '/' ? 'underline' : ''
               }`}
             >
               Accueil
@@ -44,7 +44,7 @@ export default function Header() {
             <Link
               to="/about"
               className={`text-[#FF6060] hover:underline transition ${
-                location.pathname === "/about" ? "underline" : ""
+                location.pathname === '/about' ? 'underline' : ''
               }`}
             >
               A Propos
@@ -61,7 +61,7 @@ export default function Header() {
               <Link
                 to="/"
                 className={`text-[#FF6060] hover:underline transition ${
-                  location.pathname === "/" ? "underline" : ""
+                  location.pathname === '/' ? 'underline' : ''
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >
@@ -72,7 +72,7 @@ export default function Header() {
               <Link
                 to="/about"
                 className={`text-[#FF6060] hover:underline transition ${
-                  location.pathname === "/about" ? "underline" : ""
+                  location.pathname === '/about' ? 'underline' : ''
                 }`}
                 onClick={() => setIsMenuOpen(false)}
               >

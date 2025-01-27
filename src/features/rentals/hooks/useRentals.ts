@@ -1,6 +1,6 @@
-import {useState, useEffect} from "react";
-import type {Rental} from "../types/rental";
-import {RentalsService} from "../services/api/rentals";
+import { useState, useEffect } from 'react';
+import type { Rental } from '@features/rentals/types';
+import { RentalsService } from '@features/rentals/services';
 
 export function useRentals() {
   const [rentals, setRentals] = useState<Rental[]>([]);
@@ -15,7 +15,7 @@ export function useRentals() {
         setRentals(data);
       } catch (err) {
         setError(
-          err instanceof Error ? err : new Error("Failed to fetch rentals")
+          err instanceof Error ? err : new Error('Failed to fetch rentals'),
         );
       } finally {
         setLoading(false);
@@ -25,5 +25,5 @@ export function useRentals() {
     fetchRentals();
   }, []);
 
-  return {rentals, loading, error};
+  return { rentals, loading, error };
 }

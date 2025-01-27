@@ -1,6 +1,6 @@
-import {FaStar as Star, FaStarHalfAlt as StarHalf} from "react-icons/fa";
+import { FaStar as Star, FaStarHalfAlt as StarHalf } from 'react-icons/fa';
 
-export const RatingStars = ({rating = 0}: {rating: number}) => {
+export const RatingStars = ({ rating = 0 }: { rating: number }) => {
   const fullStars = Math.floor(rating);
   const hasHalfStar = rating % 1 !== 0;
 

@@ -16,4 +16,4 @@ export type Rental = {
   tags: string[];
 };
 
-export type RentalCard = Pick<Rental, "id" | "title" | "cover">;
+export type RentalCard = Pick<Rental, 'id' | 'title' | 'cover'>;
