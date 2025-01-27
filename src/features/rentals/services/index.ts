@@ -9,7 +9,6 @@ export class RentalsService {
 
   private async loadRentals(): Promise<void> {
     if (!this.dataLoaded) {
-      console.log(process.env);
       const rentalsUrl = `/kasa-rental-app-front/rentals.json`;
       try {
         const response = await axios.get<Rental[]>(rentalsUrl);
